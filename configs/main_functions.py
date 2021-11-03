@@ -420,7 +420,6 @@ def get_account_info():
 account created time >> {account_info['createdTime']}
 email >> {account_info['email']}
 phoneNumber >> {account_info['phoneNumber']}
-password >> {password}
 nickname >> {account_info['nickname']}
 user_Id >> {account_info['uid']}
 amino_Id >> {account_info['aminoId']}
