@@ -562,7 +562,7 @@ def other_utilz():
 
 def profile_utilz():
     auth()
-    menu_configs.profile_utilz_menu()
+    print(tabulate(menu_configs.profile_utilz_menu, tablefmt="fancy_grid"))
     select = input("Select >> ")
 
     if select == "1":
