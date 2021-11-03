@@ -554,8 +554,8 @@ def other_utilz():
         get_global_user_info()
     elif select == "10":
         get_chat_info()
-        elif select == "11":
-            get_account_info()
+    elif select == "11":
+    	get_account_info()
 
 # profile utilz functions
 
