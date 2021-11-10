@@ -58,7 +58,7 @@ def chats(ndc_id: str):
 def spam_comments_wiki():
     comment = input("Comment >> ")
     wiki_info = client.get_from_link(input("Wiki Link >> "))
-    wiki_id = wiki_info.objectId
+    wiki_id = wiki_info.object_Id
     ndc_Id = wiki_info.ndc_Id
     while True:
         try:
@@ -76,7 +76,7 @@ def spam_comments_wiki():
 def spam_comments_blog():
     comment = input("Comment >> ")
     blog_info = client.get_from_link(input("Blog Link >> "))
-    blog_id = blog_info.objectId
+    blog_id = blog_info.object_Id
     ndc_Id = blog_info.ndc_Id
     while True:
         try:
@@ -94,7 +94,7 @@ def spam_comments_blog():
 def spam_comments_user():
     comment = input("Comment >> ")
     user_info = client.get_from_link(input("User Link >> "))
-    user_id = user_info.objectId
+    user_id = user_info.object_Id
     ndc_Id = user_info.ndc_Id
     while True:
         try:
@@ -153,7 +153,7 @@ def spam_join_leave():
 
 def spam_reports_chat():
     thread_info = client.get_from_link(input("Chat Link >> "))
-    thread_id = thread_info.objectId
+    thread_id = thread_info.object_Id
     ndc_Id = thread_info.ndc_Id
     while True:
         try:
@@ -171,7 +171,7 @@ def spam_reports_chat():
 
 def spam_reports_user():
     user_info = client.get_from_link(input("User Link >> "))
-    user_id = user_info.objectId
+    user_id = user_info.object_Id
     ndc_Id = user_info.ndc_Id
     while True:
         try:
@@ -189,7 +189,7 @@ def spam_reports_user():
 
 def spam_reports_wiki():
     wiki_info = client.get_from_link(input("Wiki Link >> "))
-    wiki_id = wiki_info.objectId
+    wiki_id = wiki_info.object_Id
     ndc_Id = wiki_info.ndc_Id
     while True:
         try:
@@ -207,7 +207,7 @@ def spam_reports_wiki():
 
 def spam_reports_blog():
     blog_info = client.get_from_link(input("Blog Link >> "))
-    blog_id = blog_info.objectId
+    blog_id = blog_info.object_Id
     ndc_Id = blog_info.ndc_Id
     while True:
         try:
@@ -351,7 +351,7 @@ def get_block_list():
 
 def get_global_user_information():
     user_info = client.get_from_link(input("User Link >> "))
-    user_id = user_info.objectId
+    user_id = user_info.object_Id
     ndc_Id = user_info.ndc_Id
     information = client.get_user_info(user_Id=user_id)
     print(f"\tInfo \nnickname >> {information.nickname}\ncontent >> {information.content}\nuser_Id >> {information.user_Id}\nicon >> {information.icon}\ncreatedTime >> {information.createdTime}\nmodifiedTime >> {information.modifiedTime}\nweb_url >> {information.web_URL}\n \tEnd")
@@ -379,14 +379,14 @@ def get_community_info():
 
 def get_global_user_info():
     link_info = client.get_from_link(input("User Link >> "))
-    user_info = client.get_user_info(user_Id=link_info.objectId)
+    user_info = client.get_user_info(user_Id=link_info.object_Id)
     print(
         f"""User Info:
 account created time >> {user_info.createdTime}
 nickname >> {user_info.nickname}
 content >> {user_info.content}
 icon link >> {user_info.icon}
-user_Id >> {link_info.objectId}
+user_Id >> {link_info.object_Id}
 amino_Id >> {user_info.amino_Id}
 web_url >> {user_info.web_URL}"""
     )
@@ -398,7 +398,7 @@ def get_chat_info():
     link_info = client.get_from_link(input("Chat Link >> "))
     chat_info = client.get_thread(
         ndc_Id=link_info.ndc_Id,
-        thread_Id=link_info.objectId)["thread"]
+        thread_Id=link_info.object_Id)["thread"]
     print(
         f"""Chat info:
 title >> {chat_info['title']}
